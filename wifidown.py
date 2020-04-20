@@ -20,6 +20,6 @@ if connect == True and there == False:
     with open(location, "a") as file:
         file.writelines("\toption disabled '1'")
       
-if dns == False:
+if dns == False and connect == True:
     with open(location, "a") as file:
         file.writelines("\n\toption dns '209.222.18.218 209.222.18.222'")    
