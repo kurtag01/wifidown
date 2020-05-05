@@ -11,7 +11,7 @@ with open (location, "r") as file:
     for line in wifi:
         if 'wwan' in line:
             connect = True            
-        if "'option disabled '1'" in line:
+        if 'option disabled' in line:
             there = True
         if '209.222.18.218 209.222.18.222' in line:
             dns = True
