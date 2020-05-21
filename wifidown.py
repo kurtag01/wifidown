@@ -22,7 +22,7 @@ with open(location, "r") as file:
 with open(location2, "r") as file:
     stuff = file.readlines()
     for line in stuff:
-        if '209.222.18.218 209.222.18.222' in line:
+        if '209.222.18.218' in line:
             dns = True
             
 #now we write the files
