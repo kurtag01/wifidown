@@ -22,7 +22,7 @@ with open(location, "r") as file:
 with open(location2, "r") as file:
     stuff = file.readlines()
     for line in stuff:
-        if '209.222.18.218' in line:
+        if '208.67.222.222' in line:
             dns = True
             
 #now we write the files
@@ -35,7 +35,7 @@ if dns == False and connect == True:
         for line in old_file:
             new_file.write(line)
             if 'dhcp' in line:
-                new_file.write("\tlist dns '209.222.18.218'\n\tlist dns '209.222.18.222'\n\toption peerdns '0'\n")
+                new_file.write("\tlist dns '208.67.222.222'\n\tlist dns '1.1.1.1'\n\toption peerdns '0'\n")
 
 os.rename("/etc/config/network.new", location2)
 
